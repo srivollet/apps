@@ -24,4 +24,5 @@ import { ListPage } from '../pages/list/list';
   ],
   providers: []
 })
+
 export class AppModule {}
