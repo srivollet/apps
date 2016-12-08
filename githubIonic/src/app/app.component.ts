@@ -1,13 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-
-import { Platform, MenuController, Nav } from 'ionic-angular';
+import { Platform, Nav } from 'ionic-angular';
 
 import { StatusBar } from 'ionic-native';
 
-import { UsersPage } from '../pages/users/users';
-import { ReposPage } from '../pages/repos/repos';
-import { OrganisationsPage } from '../pages/organisations/organisations';
-
+import { Tab1 } from '../pages/tab1';
+import { Tab2 } from '../pages/tab2';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,22 +12,14 @@ import { OrganisationsPage } from '../pages/organisations/organisations';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  // make HelloIonicPage the root (or first) page
-  rootPage: any = UsersPage;
-  pages: Array<{title: string, component: any}>;
+  tab1: any;
+  tab2: any;
 
-  constructor(
-    public platform: Platform,
-    public menu: MenuController
-  ) {
+  constructor(public platform: Platform) {
     this.initializeApp();
 
-    // set our app's pages
-    this.pages = [
-      { title: 'Users', component: UsersPage },
-      { title: 'Organisations', component: OrganisationsPage },
-      { title: 'Repos', component: ReposPage}
-    ];
+    this.tab1 = Tab1;
+    this.tab2 = Tab2;
   }
 
   initializeApp() {
@@ -38,13 +27,8 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
-    });
-  }
 
-  openPage(page) {
-    // close the menu when clicking a link from the menu
-    this.menu.close();
-    // navigate to the new page if it is not the current page
-    this.nav.setRoot(page.component);
+      //this.nav.setRoot(tab1);
+    });
   }
 }
