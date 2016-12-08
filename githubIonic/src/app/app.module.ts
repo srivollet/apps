@@ -4,7 +4,6 @@ import { MyApp } from './app.component';
 import { Tab1 } from '../pages/tab1/tab1';
 import { Tab2 } from '../pages/tab2/tab2';
 
-
 @NgModule({
   declarations: [
     MyApp,
