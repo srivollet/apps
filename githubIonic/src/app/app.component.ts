@@ -5,11 +5,7 @@ import { Tab1 } from '../pages/tab1/tab1';
 import { Tab2 } from '../pages/tab2/tab2';
 
 @Component({
-  template: `
-  <ion-tabs>
-    <ion-tab tabIcon="heart" [root]="tab1"></ion-tab>
-    <ion-tab tabIcon="star" [root]="tab2"></ion-tab>
-   </ion-tabs>`
+  templateUrl: 'app.html' 
 })
 export class MyApp {
   tab1: any;
