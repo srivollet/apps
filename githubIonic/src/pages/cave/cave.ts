@@ -3,9 +3,9 @@ import { NavController} from 'ionic-angular';
 
 
 @Component({
-  templateUrl: 'tab2.html'
+  templateUrl: 'cave.html'
 })
-export class Tab2 {
+export class Cave {
 
 	constructor(public navCtrl: NavController) {
     // Id is 1, nav refers to Tab1

@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { Tab1 } from '../pages/tab1/tab1';
-import { Tab2 } from '../pages/tab2/tab2';
+import { Recherche } from '../pages/recherche/recherche';
+import { Cave } from '../pages/cave/cave';
+import { RechercheDetail} from '../pages/rechercheDetail/rechercheDetail';
 
 @NgModule({
   declarations: [
     MyApp,
-    Tab1,
-    Tab2
+    Recherche,
+    Cave,
+    RechercheDetail
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -16,8 +18,9 @@ import { Tab2 } from '../pages/tab2/tab2';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    Tab1,
-    Tab2
+    Recherche,
+    Cave,
+    RechercheDetail
   ],
   providers: []
 })

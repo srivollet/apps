@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 
-import { Tab1 } from '../pages/tab1/tab1';
-import { Tab2 } from '../pages/tab2/tab2';
+import { Recherche } from '../pages/recherche/recherche';
+import { Cave } from '../pages/cave/cave';
 
 @Component({
   templateUrl: 'app.html' 
 })
 export class MyApp {
-  tab1: any;
-  tab2: any;
+  recherche: any;
+  cave: any;
 
   constructor(public platform: Platform) {
     //this.initializeApp();
 
-    this.tab1 = Tab1;
-    this.tab2 = Tab2;
+    this.recherche = Recherche;
+    this.cave = Cave;
   }
 
   /*initializeApp() {
