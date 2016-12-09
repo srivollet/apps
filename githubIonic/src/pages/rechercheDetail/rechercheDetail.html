@@ -1,20 +1,20 @@
 <ion-header>
 	<ion-navbar>
-      <ion-title>Recherche Détails</ion-title>
+      <ion-title></ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
 	<ion-card>	
 
-		<img src="assets/img/pomerol.png"/>
+		<img src="assets/img/{{item.photo}}"/>
 
 	    <ion-card-content>
 	      <ion-card-title>
-	        Pomerol
+	        {{item.name}}
 	      </ion-card-title>
 	      <p>
-	        Pomerol is a French wine-growing commune and Appellation d'origine contrôlée (AOC) within the Libournais ("Right Bank") in Bordeaux
+	        {{item.description}}
 	      </p>
 	    </ion-card-content>
 
@@ -30,4 +30,7 @@
 	      <ion-badge item-right>260k</ion-badge>
 	    </ion-item>
 	</ion-card>	
+
+	<button ion-button full (click)="showAlert()" >Ajouter à ma cave</button>
+
 </ion-content>
